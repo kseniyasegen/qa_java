@@ -30,8 +30,7 @@ public class FelineTest {
     public void eatMeatReturnsCorrectGetFoodForFeline() throws Exception {
         Feline feline = new Feline();
         List<String> expectedArrayListFeline = Arrays.asList("Животные", "Птицы", "Рыба");
-        List<String> actualArrayListFeline = Arrays.asList();
-        actualArrayListFeline = feline.eatMeat();
+        List<String> actualArrayListFeline = feline.eatMeat();
         Assert.assertEquals(expectedArrayListFeline, actualArrayListFeline);
     }
 

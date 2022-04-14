@@ -3,6 +3,7 @@ package com.example;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
@@ -11,9 +12,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 public class CatTest {
     @Mock
     Feline feline;
-
-    @Mock
-    Predator predator;
 
     //проверка метода getSound()
     @Test
@@ -29,8 +27,13 @@ public class CatTest {
     public void getFoodThrowsException() throws Exception {
         Cat cat = new Cat(feline);
         cat.getFood();
+        Assert.assertNotNull(cat.getFood());
+
+
     }
+
 }
+
 
 
 
